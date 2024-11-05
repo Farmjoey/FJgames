@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Få coins</title>
+    <style>
+        .coins-display {
+            font-size: 1.5em;
+            color: green;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+        }
+      
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #2b2b2b !important;
+  font-weight: 600;
+  text-align: center !important;
+  color: white;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0; /* Footer placement */
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  background-color: #333; /* Background color for visibility */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure full width */
+}
+
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  font-size: 30px; /* Size of hamburger icon */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.nav-links {
+  display: flex; /* Show links horizontally */
+  flex-wrap: wrap; /* Allows the navbar to wrap onto the next line */
+}
+
+.nav-links a {
+  padding: 10px; /* Adjust padding to suit your design */
+  white-space: nowrap; /* Prevents text from wrapping */
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px; /* Space between links */
+  transition: 0.3s;
+}
+
+.login {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+    margin-left: 15px; /* Space between links */
+}
+
+.nav-links a:hover {
+  color: #cfcfcf;
+}
+
+  .header {
+    background-color: transparent; /* Make header transparent on mobile */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Full width for mobile */
+    position: absolute; /* Position it absolutely */
+    top: 70px; /* Position it above the header */
+    left: 0; /* Align to the left */
+    background-color: #333; /* Background for links */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .nav-links a {
+    margin: 10px 0; /* Vertical spacing between links */
+    margin-left: 0; /* Remove left margin for vertical layout */
+  }
+    </style>
+</head>
+<body>
+  
+      <header class="header">
+      <nav class="navbar">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+                <span class="login" id="user-info">
+          <a class="login" href="/FJgames/login.html" class="login-btn">Login</a>
+          <a class="login" href="/FJgames/signup.html" class="signup-btn">Sign up</a>
+        </span>
+        <div class="nav-links" id="nav-links">
+          <a href="/FJgames/">Home</a>
+          <a href="/FJgames/ttt.html">Tic Tac Toe</a>
+          <a href="/FJgames/fbbf.html">Flappy Bird</a>
+          <a href="/FJgames/gtn.html">Guess the Number</a>
+          <a href="/FJgames/rps.html">Rock Paper Scissors</a>
+          <a href="/FJgames/wg.html">Wordle Game</a>
+          <a href="/FJgames/mg.html">Memory Game</a>
+        </div>
+      </nav>
+    </header>
+
+<h1>Klik på knappen for at få coins!</h1>
+<p>Du har <span id="coin-count" class="coins-display">0</span> coins.</p>
+<button id="coin-button">Få en coin</button>
+
+<script>
+// Funktion til at opdatere coins, når knappen klikkes
+document.getElementById('coin-button').addEventListener('click', function() {
+    // Send en forespørgsel til update_coins.php for at tilføje en coin
+    fetch('update_coins.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Opdater coin-saldoen på siden
+                document.getElementById('coin-count').innerText = data.coins;
+            } else {
+                alert('Fejl: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Fejl ved opdatering af coins:', error);
+        });
+});
+  
+  document.addEventListener("DOMContentLoaded", function () {
+  // Hent sessionstatus fra PHP
+  fetch('session_status.php')
+    .then(response => response.json())
+    .then(data => {
+      const userInfo = document.getElementById('user-info');
+
+      if (data.loggedIn) {
+        // Hvis brugeren er logget ind, vis velkomstbesked og logout
+        userInfo.innerHTML = `
+          <a class="welcome-message">Velkommen, ${data.username}!</a>
+          <a href="/FJgameslogout.php" class="logout-btn">Logout</a>
+        `;
+      } else {
+        // Hvis ikke logget ind, vis login og signup knapperne
+        userInfo.innerHTML = `
+          <a class="login" href="/FJgames/login.html" class="login-btn">Login</a>
+          <a class="login" href="/FJgames/signup.html" class="signup-btn">Sign up</a>
+        `;
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching session status:', error);
+    });
+});
+
+
+
+// JavaScript for toggling the navigation menu on mobile
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Hent coin-saldo via AJAX
+    function fetchCoins() {
+        fetch('get_coins.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.coins !== undefined) {
+                    document.getElementById('coin-count').innerText = data.coins;
+                } else {
+                    console.error('Fejl: kunne ikke hente coins.');
+                }
+            })
+            .catch(error => {
+                console.error('Fejl ved hentning af coins:', error);
+            });
+    }
+
+    // Kald funktionen når siden er indlæst
+    window.onload = fetchCoins;
+</script>
+
+</body>
+</html>

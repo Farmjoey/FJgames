@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/FJgameshttps://cdn.glitch.global/c3af7ac1-befa-43f4-a580-dee2646df58c/J.png?v=1729529423952"
+    />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/FJgamesrps.css" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script> <!-- Confetti library -->
+</head>
+<body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+                <span class="login" id="user-info">
+          <a class="login" href="/FJgames/login.html" class="login-btn">Login</a>
+          <a class="login" href="/FJgames/signup.html" class="signup-btn">Sign up</a>
+        </span>
+        <div class="nav-links" id="nav-links">
+          <a href="/FJgames/">Home</a>
+          <a href="/FJgames/ttt.html">Tic Tac Toe</a>
+          <a href="/FJgames/fbbf.html">Flappy Bird</a>
+          <a href="/FJgames/gtn.html">Guess the Number</a>
+          <a href="/FJgames/rps.html">Rock Paper Scissors</a>
+          <a href="/FJgames/wg.html">Wordle Game</a>
+          <a href="/FJgames/mg.html">Memory Game</a>
+        </div>
+      </nav>
+    </header>
+<div class="game-container">
+    <h1>Rock, Paper, Scissors</h1>
+    <div class="choices">
+        <button onclick="playGame('Rock')">Rock</button>
+        <button onclick="playGame('Paper')">Paper</button>
+        <button onclick="playGame('Scissors')">Scissors</button>
+    </div>
+    <div class="hands">
+        <div class="hand">
+            <img id="playerChoiceImg" src="" alt="Player's choice" />
+            <div class="label">You</div>
+        </div>
+        <div class="hand">
+            <img id="computerChoiceImg" src="" alt="Computer's choice" />
+            <div class="label">Bot</div>
+        </div>
+    </div>
+    <div id="result" class="result"></div>
+    <button id="restartButton" onclick="restartGame()" style="display: none">
+        Restart Game
+    </button>
+</div>
+    <script src="rps.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/FJgameshttps://cdn.glitch.global/c3af7ac1-befa-43f4-a580-dee2646df58c/J.png?v=1729529423952"
+    />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="/FJgamesttt.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+                <span class="login" id="user-info">
+          <a class="login" href="/FJgames/login.html" class="login-btn">Login</a>
+          <a class="login" href="/FJgames/signup.html" class="signup-btn">Sign up</a>
+        </span>
+        <div class="nav-links" id="nav-links">
+          <a href="/FJgames/">Home</a>
+          <a href="/FJgames/ttt.html">Tic Tac Toe</a>
+          <a href="/FJgames/fbbf.html">Flappy Bird</a>
+          <a href="/FJgames/gtn.html">Guess the Number</a>
+          <a href="/FJgames/rps.html">Rock Paper Scissors</a>
+          <a href="/FJgames/wg.html">Wordle Game</a>
+          <a href="/FJgames/mg.html">Memory Game</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="game-container">
+      <h1>Tic Tac Toe</h1>
+
+      <!-- Game Mode Selection -->
+      <div id="game-mode-selection">
+        <button onclick="startGame('solo')">Play vs Friend</button>
+        <button onclick="startGame('bot')">Play vs Bot</button>
+      </div>
+
+      <!-- Game Board -->
+      <div id="status"></div>
+      <div class="game-board" id="board" style="display: none;">
+        <div id="cell-0" class="cell" onclick="makeMove(0)"></div>
+        <div id="cell-1" class="cell" onclick="makeMove(1)"></div>
+        <div id="cell-2" class="cell" onclick="makeMove(2)"></div>
+        <div id="cell-3" class="cell" onclick="makeMove(3)"></div>
+        <div id="cell-4" class="cell" onclick="makeMove(4)"></div>
+        <div id="cell-5" class="cell" onclick="makeMove(5)"></div>
+        <div id="cell-6" class="cell" onclick="makeMove(6)"></div>
+        <div id="cell-7" class="cell" onclick="makeMove(7)"></div>
+        <div id="cell-8" class="cell" onclick="makeMove(8)"></div>
+      </div>
+
+      <button onclick="resetGame()">Restart Game</button>
+    </div>
+    
+    <script src="ttt.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/FJgameshttps://cdn.glitch.global/c3af7ac1-befa-43f4-a580-dee2646df58c/J.png?v=1729529423952"
+    />
+  <title>Wordle Game</title>
+  <link rel="stylesheet" href="/FJgameswg.css" />
+</head>
+<body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+                <span class="login" id="user-info">
+          <a class="login" href="/FJgames/login.html" class="login-btn">Login</a>
+          <a class="login" href="/FJgames/signup.html" class="signup-btn">Sign up</a>
+        </span>
+        <div class="nav-links" id="nav-links">
+          <a href="/FJgames/">Home</a>
+          <a href="/FJgames/ttt.html">Tic Tac Toe</a>
+          <a href="/FJgames/fbbf.html">Flappy Bird</a>
+          <a href="/FJgames/gtn.html">Guess the Number</a>
+          <a href="/FJgames/rps.html">Rock Paper Scissors</a>
+          <a href="/FJgames/wg.html">Wordle Game</a>
+          <a href="/FJgames/mg.html">Memory Game</a>
+        </div>
+      </nav>
+    </header>
+  <div id="game">
+    <h1>Wordle Game</h1>
+    <div id="grid"></div>
+    <div id="message"></div>
+    <input type="text" id="input" maxlength="4" placeholder="none" />
+    <button id="submit">Submit</button>
+    <button id="reset">Reset Game</button>
+    
+    <div id="keyboard">
+      <div class="row">
+        <button class="key">Q</button>
+        <button class="key">W</button>
+        <button class="key">E</button>
+        <button class="key">R</button>
+        <button class="key">T</button>
+        <button class="key">Y</button>
+        <button class="key">U</button>
+        <button class="key">I</button>
+        <button class="key">O</button>
+        <button class="key">P</button>
+      </div>
+      <div class="row">
+        <button class="key">A</button>
+        <button class="key">S</button>
+        <button class="key">D</button>
+        <button class="key">F</button>
+        <button class="key">G</button>
+        <button class="key">H</button>
+        <button class="key">J</button>
+        <button class="key">K</button>
+        <button class="key">L</button>
+      </div>
+      <div class="row">
+        <button class="key">Z</button>
+        <button class="key">X</button>
+        <button class="key">C</button>
+        <button class="key">V</button>
+        <button class="key">B</button>
+        <button class="key">N</button>
+        <button class="key">M</button>
+        <button id="delete" class="key">DEL</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="wg.js"></script>
+</body>
+</html>

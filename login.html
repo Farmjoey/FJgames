@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link
+      rel="shortcut icon"
+      type="image/png"
+      href="/FJgameshttps://cdn.glitch.global/c3af7ac1-befa-43f4-a580-dee2646df58c/J.png?v=1729529423952"
+    />
+    <title>Login - FJgames</title>
+    <link rel="stylesheet" href="/FJgameslogin.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+                <span class="login" id="user-info">
+          <a class="login" href="/FJgames/login.html" class="login-btn">Login</a>
+          <a class="login" href="/FJgames/signup.html" class="signup-btn">Sign up</a>
+        </span>
+        <div class="nav-links" id="nav-links">
+          <a href="/FJgames/">Home</a>
+          <a href="/FJgames/ttt.html">Tic Tac Toe</a>
+          <a href="/FJgames/fbbf.html">Flappy Bird</a>
+          <a href="/FJgames/gtn.html">Guess the Number</a>
+          <a href="/FJgames/rps.html">Rock Paper Scissors</a>
+          <a href="/FJgames/wg.html">Wordle Game</a>
+          <a href="/FJgames/mg.html">Memory Game</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="login-form">
+      <h2>Login</h2>
+      <form action="login.php" method="POST">
+        <div class="error-message">
+          <!-- Her kan du vise fejlbeskeder ved behov -->
+          <?php if (isset($_GET['error'])): ?>
+            <p style="color: red;"><?php echo htmlspecialchars($_GET['error']); ?></p>
+          <?php endif; ?>
+        </div>
+        <input type="text" name="username" placeholder="Brugernavn" required />
+        <input type="password" name="password" placeholder="Adgangskode" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <p class="p">Har du ikke en konto? <a href="/FJgamessignup.html">Opret en konto</a></p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
