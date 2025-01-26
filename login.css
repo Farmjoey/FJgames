@@ -1,0 +1,263 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #2b2b2b !important;
+  font-weight: 600;
+  text-align: center !important;
+  color: white;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0; /* Footer placement */
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  background-color: #333; /* Background color for visibility */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure full width */
+}
+
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  font-size: 30px; /* Size of hamburger icon */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.nav-links {
+  display: flex; /* Show links horizontally */
+  flex-wrap: wrap; /* Allows the navbar to wrap onto the next line */
+}
+
+.nav-links a {
+  padding: 10px; /* Adjust padding to suit your design */
+  white-space: nowrap; /* Prevents text from wrapping */
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px; /* Space between links */
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #cfcfcf;
+}
+
+  .header {
+    background-color: transparent; /* Make header transparent on mobile */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Full width for mobile */
+    position: absolute; /* Position it absolutely */
+    top: 70px; /* Position it above the header */
+    left: 0; /* Align to the left */
+    background-color: #333; /* Background for links */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .nav-links a {
+    margin: 10px 0; /* Vertical spacing between links */
+    margin-left: 0; /* Remove left margin for vertical layout */
+  }
+
+.login-form {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 0px solid #ccc;
+  border-radius: 10px;
+  background-color: #3b3b3b;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4b4b4b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #45a049;
+}
+
+.error-message p {
+   text-align: center;
+   color: red;
+}
+
+.p {
+  color: #fff;
+}
+
+.login {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+    margin-left: 15px; /* Space between links */
+}
+
+.casual-games h2 {
+  font-size: 24px;
+  color: #3b3b3b;
+  margin-left: 20px;
+}
+
+/* Game Card Grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-card {
+  background-color: #3b3b3b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.casual-games h2 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* Remove these Google login styles */
+.google-login,
+.g_id_signin {
+    display: none;
+}
+
+/* Update social login styles */
+.social-login {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.social-login p {
+    color: #888;
+    margin: 15px 0;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #444;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+/* GitHub button styles */
+.github-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    background-color: #24292e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.github-button:hover {
+    background-color: #2c3238;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.github-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.github-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.github-button:hover img {
+    transform: scale(1.1);
+}

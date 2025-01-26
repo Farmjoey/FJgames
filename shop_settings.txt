@@ -1,0 +1,114 @@
+{
+  "blueBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "makerBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "revive": {
+    "visible": true,
+    "price": 25000
+  },
+  "oldBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "skyBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "gayBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "widerPipeGap": {
+    "visible": false,
+    "price": 10000
+  },
+  "slowerPipes": {
+    "visible": false,
+    "price": 10000
+  },
+  "lowerGravity": {
+    "visible": true,
+    "price": 10000
+  },
+  "greenBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "redBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "adminBirdSkin": {
+    "visible": false,
+    "price": 100000
+  },
+  "juleBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "jonesBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "monsterBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "primoBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "omirpBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "neergBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "danskBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "pixilBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "ownerBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "invisibleBirdSkin": {
+    "visible": false,
+    "price": 50000
+  },
+  "tripleCoins": {
+    "visible": true,
+    "price": 100000
+  },
+  "countryballBirdSkin": {
+    "visible": true,
+    "price": 50000
+  },
+  "polandBirdSkin": {
+    "visible": true,
+    "price": 50000
+  },
+  "countryballMakerBirdSkin": {
+    "visible": true,
+    "price": 50000
+  },
+  "greenV2BirdSkin": {
+    "visible": true,
+    "price": 50000
+  },
+  "notAdminBirdSkin": {
+    "visible": true,
+    "price": 100000
+  }
+}

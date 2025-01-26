@@ -1,0 +1,189 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #2b2b2b !important;
+  font-weight: 600;
+  text-align: center !important;
+  color: white;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.game-container {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100px;
+  margin-bottom: 10px; /* Added margin-bottom for spacing */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3b3b3b;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #03DA51;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#restartButton {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0; /* Footer placement */
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  background-color: #333; /* Background color for visibility */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure full width */
+}
+
+.hamburger {
+  display: none; /* Hidden on larger screens */
+  font-size: 30px; /* Size of hamburger icon */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.nav-links {
+  display: flex; /* Show links horizontally */
+  flex-wrap: wrap; /* Allows the navbar to wrap onto the next line */
+}
+
+.nav-links a {
+  padding: 10px; /* Adjust padding to suit your design */
+  white-space: nowrap; /* Prevents text from wrapping */
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px; /* Space between links */
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #cfcfcf;
+}
+
+  .header {
+    background-color: transparent; /* Make header transparent on mobile */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Full width for mobile */
+    position: absolute; /* Position it absolutely */
+    top: 70px; /* Position it above the header */
+    left: 0; /* Align to the left */
+    background-color: #333; /* Background for links */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .nav-links a {
+    margin: 10px 0; /* Vertical spacing between links */
+    margin-left: 0; /* Remove left margin for vertical layout */
+  }
+
+.login {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+    margin-left: 15px; /* Space between links */
+}
+
+.casual-games h2 {
+  font-size: 24px;
+  color: #3b3b3b;
+  margin-left: 20px;
+}
+
+/* Game Card Grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-card {
+  background-color: #3b3b3b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.game-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.casual-games h2 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #fff;
+}

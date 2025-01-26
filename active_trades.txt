@@ -1,0 +1,10 @@
+{
+    "1": {
+        "slot1": "Farmjoey",
+        "slot2": "sikebiha"
+    },
+    "2": {
+        "slot1": null,
+        "slot2": null
+    }
+}
